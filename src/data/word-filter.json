@@ -1,0 +1,18 @@
+{
+    "a": ["a", "an", "about", "above", "across", "after", "against", "alongside", "amid", "amidst", "around", "as", "astride", "at", "atop", "and"],
+    "b": ["before", "behind", "below", "beneath", "beside", "between", "beyond", "but", "by", "because", "backward"],
+    "d": ["despite", "down", "during"],
+    "e": ["except", "excluding"],
+    "f": ["following", "for", "from", "forward", "further"],
+    "g": ["given", "gone"],
+    "i": ["in", "including", "inside", "into"],
+    "l": ["less", "like"],
+    "m": ["minus", "more", "many"],
+    "n": ["near"],
+    "o": ["of", "off", "on", "onto","out", "opposite", "outside", "over", "or"],
+    "p": ["past", "per"],
+    "s": ["since"],
+    "t": ["the", "than", "through", "throughout", "till", "to", "towards" ],
+    "u": ["under", "underneath", "unlike", "until", "up", "upon"],
+    "w": ["with", "within", "without"]
+}
