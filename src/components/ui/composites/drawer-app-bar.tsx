@@ -19,7 +19,7 @@ interface DrawerAppBarProps{
     title: string;
     value: number;
     onChange: (value: number) => void;
-    children: {name:string, content: React.ReactNode}[];
+    children: {name:string, content: React.ReactNode, disabled?:boolean}[];
 };
 
 const drawerWidth = 240;
@@ -45,7 +45,16 @@ export default function DrawerAppBar({title, children, value, onChange}: DrawerA
             <List>
             {children.map((item, i) => (
                 <ListItem key={item.name+'-drawer-entry'} disablePadding>
-                    <ListItemButton sx={{ textAlign: 'center' }} onClick={()=>handleChange(i)}>
+                    <ListItemButton 
+                        sx={{ 
+                            textAlign: 'center', 
+                            color: 'text.primary',
+                            bgcolor: 'primary.main',
+                            '&:hover':{ bgcolor: 'secondary.main'}
+                        }} 
+                        onClick={()=> handleChange(i)}
+                        disabled={item.disabled}
+                    >
                         <ListItemText primary={item.name} />
                     </ListItemButton>
                 </ListItem>
@@ -79,7 +88,17 @@ export default function DrawerAppBar({title, children, value, onChange}: DrawerA
                         <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
                             <ButtonGroup variant="text" aria-label="Basic button group" color='secondary'>
                                 {children.map((item, i) => (
-                                        <Button key={item.name+'-button'} sx={{ fontSize:'150%', color: 'text.primary', bgcolor: 'primary.main', '&:hover':{ bgcolor: 'secondary.main'} }} onClick={()=>handleChange(i)}>
+                                        <Button 
+                                            key={item.name+'-button'}
+                                            sx={{ 
+                                                fontSize:'150%',
+                                                color: 'text.primary',
+                                                bgcolor: 'primary.main', 
+                                                '&:hover':{ bgcolor: 'secondary.main'}
+                                            }}
+                                            onClick={()=>handleChange(i)}
+                                            disabled={item.disabled}
+                                        >
                                             {item.name}
                                         </Button>
                                 ))}

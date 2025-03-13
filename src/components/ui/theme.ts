@@ -21,6 +21,9 @@ export const theme = createTheme({
             default: '#142030',
             paper: '#142030'
         },
+        action:{
+            disabled:'#f5e5e661'
+        }
     },
     typography:{
         fontFamily: '"Space Mono", Monaco, monospace',
@@ -38,7 +41,7 @@ export const theme = createTheme({
                 variant: 'contained',
                 sx: {
                     width:'fit-content',
-                    fontSize:'inherit' 
+                    fontSize:'inherit',
                 },      
             },
         },

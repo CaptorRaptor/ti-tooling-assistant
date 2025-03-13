@@ -111,6 +111,7 @@ function App() {
                     },
                     {
                         name: 'ASCII Art Draw Pad',
+                        disabled: true,
                         content: <ASCIIArtPage 
                             isLoading={loading}
                             value={state.asciiArtState}
