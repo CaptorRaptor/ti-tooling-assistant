@@ -1,12 +1,11 @@
 {
   "short_name": "TI:LEGACY TOOLING",
   "name": "TI:LEGACY TOOLING ASSISTANT",
-  "icons": [
-    {
-      "src": "locropped-Full-Color-Brandmark-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    }
+  "icons": [    {
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }
   ],
   "start_url": ".",
   "display": "standalone",
