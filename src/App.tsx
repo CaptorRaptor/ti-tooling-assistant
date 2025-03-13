@@ -10,7 +10,7 @@ import React from 'react';
 import { Gradient } from './lib/color';
 import { AsciiArtState } from './lib/persistence/ascii-art-state';
 
-const appTitle = 'TI:LEGACY TOOLING ASSISTENT';
+const appTitle = 'TI:LEGACY TOOLING ASSISTANT';
 
 function App() {
     const [state, setState] = React.useState<PageState>(getDefaultPageState());
