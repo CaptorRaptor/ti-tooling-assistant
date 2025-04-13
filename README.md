@@ -3,3 +3,10 @@
 This tool is a combination of different ideas floating around to tool and color items for the MUD The Inquisition:Legacy.
 
 Within the game, telnet colors are represented by colorcodes with two possible strucutres: {A or \<AAA>.
+
+# Todo
+
+- [] Outfit Helper
+    - [] get all wear slots
+    - [] programm input mask
+    - [] programm draw pad

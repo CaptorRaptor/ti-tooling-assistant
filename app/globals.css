@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+
+:root {
+    --background: #142030;
+    --foreground: #f5e5e6;
+};
+
+@theme inline {
+    --color-background: #142030;
+    --color-foreground: #f5e5e6;
+    --color-text: #f5e5e6;
+    --color-primary-light: #263447;
+    --color-primary: #142030;
+    --color-primary-dark: #0e1621;
+    --color-secondary-light: #b35f33;
+    --color-secondary: #a13800;
+    --color-secondary-dark: #702700;
+    --color-link: #5bcbff;
+    --color-terminal-fg: #c0c0c0;
+    --color-terminal-bg: #000000;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+};
+
+@layer base{
+    h1{
+        @apply self-center text-xl md:text-2xl lg:text-3xl text-text select-none;
+    }
+    
+    h2{
+        @apply self-center text-xl lg:text-2xl text-text select-none;
+    }
+    
+    p{
+        @apply self-center text-base text-text select-none;
+    }
+
+    a{
+        @apply text-link underline;
+    }
+
+    button{
+        @apply bg-secondary text-text rounded-lg p-2 hover:bg-secondary-light cursor-pointer
+    }
+
+    select{
+        @apply w-full text-text border border-primary-light rounded pl-3 pr-8 py-2 focus:outline-none focus:border-slate-400 hover:border-slate-400 appearance-none cursor-pointer *:bg-primary *:text-text *:hover:bg-secondary
+    }
+    
+    dialog{
+        @apply bg-primary w-4/5 md:w-1/2 h-3/4 border-2 border-primary-dark overflow-y-scroll justify-self-center self-center
+    }
+}
+
+@layer components{
+    .card {
+        @apply m-4 rounded-lg bg-primary text-text p-4 pt-5 sm:p-6 sm:pb-4 w-sm sm:w-xl md:w-2xl lg:w-3xl
+    }
+    .card-container{
+        @apply grid gap-4
+    }
+    .terminal {
+        @apply m-4 rounded-lg bg-black p-4
+    }
+    .vertical-divide{
+        @apply inline-block min-h-[1em] w-0.5 self-center bg-secondary-dark mx-4
+    }
+    .horizontal-divide{
+        @apply my-4 h-0.5 border-t-0 bg-secondary-dark
+    }
+    .icon-button{
+        @apply flex items-center gap-2 rounded-full bg-primary hover:bg-primary-light p-0
+    }
+    .text-icon-button{
+        @apply flex flex-row items-center justify-center w-full p-0 md:gap-2 md:rounded-full md:bg-primary md:hover:bg-primary-light md:p-1 md:w-fit md:h-fit
+    }
+    .select-button{
+        @apply w-full cursor-pointer rounded-md bg-primary py-1.5 pr-2 pl-3 text-left outline-1 -outline-offset-1 outline-primary-light focus:outline-slate-400 hover:outline-slate-400 sm:text-sm/6
+    }
+    .file-input{
+        @apply block w-full text-text border border-primary-dark rounded-lg cursor-pointer bg-primary-dark focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-1 file:border-primary-light file:focus:border-slate-400 file:hover:border-slate-400 file:bg-primary hover:file:bg-primary-light
+    }
+    .file-input-help{
+        @apply mt-1 text-sm text-gray-300/80
+    }
+    .text-input{
+        @apply  bg-primary-dark p-1 text-text w-full min-h-8 border border-primary-light rounded placeholder-text/50 break-all p-2 disabled:text-text/50 disabled:bg-transparent
+    }
+}
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    @layer utilities {
+        .scrollbar::-webkit-scrollbar {
+          width: 20px;
+          height: 20px;
+        }
+      
+        .scrollbar::-webkit-scrollbar-track {
+          border-radius: 100vh;
+          background: var(--color-primary-dark);
+        }
+      
+        .scrollbar::-webkit-scrollbar-thumb {
+          background: var(--color-secondary);
+          border-radius: 100vh;
+          border: 3px solid var(--color-secondary);
+        }
+      
+        .scrollbar::-webkit-scrollbar-thumb:hover {
+          background: var(--color-secondary-light);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--background);
+    --foreground: var(--foreground);
+  }
+}
+
+body {
+  background: radial-gradient(
+    circle at 50% 0%,
+    #e8e3c7 0%,
+    #ffb25b 10%,
+    #732926 50%,
+    #142030 100%
+  );
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: "Space Mono", Monaco, monospace;
+}
+
+dialog::backdrop{
+    background-color: black;
+    opacity: 60%;
+}

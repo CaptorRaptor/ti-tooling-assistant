@@ -1,0 +1,81 @@
+{
+    "Gradient": [
+        "aaa", "aba", "aca", "ada", "aea", "afa", "bfa", "bea", "bda", "bca", "bba", "baa",
+        "aab", "abb", "acb", "adb", "aeb", "afb", "bfb", "beb", "bdb", "bcb", "bbb", "bab",
+        "aac", "abc", "acc", "adc", "aec", "afc", "bfc", "bec", "bdc", "bcc", "bbc", "bac",
+        "aad", "abd", "acd", "add", "aed", "afd", "bfd", "bed", "bdd", "bcd", "bbd", "bad",
+        "aae", "abe", "ace", "ade", "aee", "afe", "bfe", "bee", "bde", "bce", "bbe", "bae",
+        "aaf", "abf", "acf", "adf", "aef", "aff", "bff", "bef", "bdf", "bcf", "bbf", "baf",
+        "caf", "cbf", "ccf", "cdf", "cef", "cff", "dff", "def", "ddf", "dcf", "dbf", "daf",
+        "cae", "cbe", "cce", "cde", "cee", "cfe", "dfe", "dee", "dde", "dce", "dbe", "dae",
+        "cad", "cbd", "ccd", "cdd", "ced", "cfd", "dfd", "ded", "ddd", "dcd", "dbd", "dad",
+        "cac", "cbc", "ccc", "cdc", "cec", "cfc", "dfc", "dec", "ddc", "dcc", "dbc", "dac",
+        "cab", "cbb", "ccb", "cdb", "ceb", "cfb", "dfb", "deb", "ddb", "dcb", "dbb", "dab",
+        "caa", "cba", "cca", "cda", "cea", "cfa", "dfa", "dea", "dda", "dca", "dba", "daa",
+        "eaa", "eba", "eca", "eda", "eea", "efa", "ffa", "fea", "fda", "fca", "fba", "faa",
+        "eab", "ebb", "ecb", "edb", "eeb", "efb", "ffb", "feb", "fdb", "fcb", "fbb", "fab",
+        "eac", "ebc", "ecc", "edc", "eec", "efc", "ffc", "fec", "fdc", "fcc", "fbc", "fac",
+        "ead", "ebd", "ecd", "edd", "eed", "efd", "ffd", "fed", "fdd", "fcd", "fbd", "fad",
+        "eae", "ebe", "ece", "ede", "eee", "efe", "ffe", "fee", "fde", "fce", "fbe", "fae",
+        "eaf", "ebf", "ecf", "edf", "eef", "eff", "fff", "fef", "fdf", "fcf", "fbf", "faf"
+    ],
+    "ColorShades":[
+        {
+            "name": "Red",
+            "colors" : [
+                "baa", "caa", "daa", "dab", "dba", "dbb", "eba", "ebb", "ebc", "eaa", "eab", "ecb", "ecc",
+                "faa", "fab", "fac", "fba", "fbb", "fca", "fcb"
+            ]
+        },
+        {
+            "name": "Yellow",
+            "colors": [
+                "cba", "cbb", "cca", "ccb", "ccc", "dca", "dcb", "dcc", "dda", "ddb", "ddc", "eca", "eda",
+                "edb", "edc", "fcc", "fda", "fdb", "fdc", "eea", "eeb", "eec", "eed", "efa", "efb", "efc",
+                "fea", "feb", "fec", "fed", "ffa", "ffb", "ffc", "ffd", "ffe"
+            ]
+        },
+        {
+            "name": "Green",
+            "colors": [ 
+                "aba", "abb", "aca", "acb", "ada", "adb", "adc", "aec", "bba", "bbb", "bca", "bcb", "bda",
+                "bdb", "bdc", "bea", "beb", "bec", "cda", "cdb", "cdc", "cea", "ceb", "cec", "dea", "deb",
+                "dec", "aea", "aeb", "afa", "afb", "afc", "afd", "bfa", "bfb", "bfc", "bfd", "cfa", "cfb",
+                "cfc", "cfd", "ded", "dfa", "dfb", "dfc", "dfd", "dfe", "efd", "efe"
+            ]
+        },
+        {
+            "name": "Blue",
+            "colors": [
+                "aab", "aac", "aad", "abc", "acd", "bad", "bae", "baf", "bbd", "bcd", "aae", "aaf", "abd",
+                "abe", "abf", "ace", "acf", "ade", "adf", "aee", "aef", "bbe", "bbf", "bce", "bcf", "bde",
+                "bdf", "cdf", "ddf"
+            ]
+        },
+        {
+            "name": "Cyan",
+            "colors": [
+                "acc", "add", "aed", "bcc", "bdd", "cdd", "cde", "ced", "cee", "cef", "dde", "eee", "afe",
+                "aff", "bed", "bee", "bef", "bfe", "bff", "cfe", "cff", "dee", "def", "dff", "eff"
+            ]
+        },
+        { 
+            "name": "Magenta",
+            "colors": [
+                "bab", "bac", "bbc", "cab", "cac", "cad", "cae", "caf", "cbc", "cbd", "cbe", "cbf", "ccd",
+                "cce", "ccf", "dac", "dad", "dae", "daf", "dbc", "dbd", "dbe", "dbf", "dcd", "dce", "dcf",
+                "eac", "ead", "eae", "eaf", "ebd", "ebe", "ebf", "ecd", "ece", "ecf", "edd", "ede", "edf",
+                "fad", "fae", "faf", "fbc", "fbd", "fbe", "fbf", "fcd", "fce", "fcf", "fdd", "fde", "fdf",
+                "fee", "fef", "eef"
+            ]
+        },
+        {  
+            "name": "Grey",
+            "colors": [
+                "g00", "g01", "g02", "g03", "g04", "g05", "g06", "g07", "g08", "g09", "g10", "g11", "g12",
+                "g13", "g14", "g15", "g16", "g17", "g18", "g19", "g20", "g21", "g22", "g23", "aaa", "bbb",
+                "ccc", "ddd", "eee", "fff"
+            ]
+        }
+    ]
+}
