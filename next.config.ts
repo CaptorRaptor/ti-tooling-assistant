@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  output: 'export',
-  distDir: 'dist'
+  output: 'export'
 }
 
 export default nextConfig;
