@@ -7,7 +7,9 @@ const nextConfig: NextConfig = {
         unoptimized: true, // Disable default image optimization
     },
     output: 'export',
-    basePath: isProd? '/ti-tooling-assistant' : '',
+    trailingSlash: true,
+    basePath: isProd? '/ti-tooling-assistant/' : '',
+    assetPrefix: isProd? '/ti-tooling-assistant/' : '',
 }
 
 export default nextConfig;
