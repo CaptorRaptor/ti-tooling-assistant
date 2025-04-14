@@ -55,12 +55,11 @@ export function getKeywords(short:string):string{
 }
 
 export function getToolResult(item: ItemDesc, opt: ToolOption){
-    const keyword = item.keywords
-    + (opt.addKeywords? 
-        item.extendedDescList
-            .filter((e)=>e.keywords.length > 0)
-            .map(e => e.keywords).join(' ') 
-        : '');
+    const extendedKeys = opt.addKeywords? item.extendedDescList
+        .filter((e)=>e.keywords.length > 0)
+        .map(e => e.keywords)
+        .filter(k => item.keywords !== k) : [];
+    const keyword = item.keywords + (extendedKeys.length > 0? ' ' + extendedKeys.join(' '): '');
     const target = opt.key.length > 0? opt.key : item.keywords.split(' ')[0];
     const eol = opt.lineSeparator.length === 0? '\n' : opt.lineSeparator;
     const extendedDescs = item.extendedDescList.map(e => formatExtendedDesc(e, target, opt)).join(eol);

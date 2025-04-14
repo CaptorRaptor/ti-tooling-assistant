@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     },
     output: 'export',
     trailingSlash: true,
-    basePath: isProd? '/ti-tooling-assistant/' : '',
+    basePath: isProd? '/ti-tooling-assistant' : '',
     assetPrefix: isProd? '/ti-tooling-assistant/' : '',
 }
 
