@@ -1,6 +1,4 @@
-import { ColoredText } from "@/lib/color";
-import { OutfitItem, OutfitSlots } from "@/lib/wear-slots";
-import clsx from "clsx";
+import { OutfitSlots } from "@/lib/wear-slots";
 import React from "react";
 import OutfitDrawRow from "./outfit-draw-row";
 

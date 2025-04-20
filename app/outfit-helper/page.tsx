@@ -1,7 +1,7 @@
 'use client'
 
 import { ColorFillIcon, EraserIcon, ResizeTextArea } from "@/components";
-import { getNewSlot, getWearSlot, initialOutfitSlots, OutfitItem, OutfitSlots, ToDisplay } from "@/lib/wear-slots";
+import { getNewSlot, getWearSlot, OutfitItem, OutfitSlots } from "@/lib/wear-slots";
 import { ClipboardDocumentIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import React from "react";

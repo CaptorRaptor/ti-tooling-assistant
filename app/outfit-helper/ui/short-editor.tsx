@@ -43,7 +43,7 @@ export default function ShortEditor({list, label, length, onUpdate}: ShortEditor
     }
     
     const handleChange = (index: number, item: OutfitItem) =>{
-        let newList = [...list];
+        const newList = [...list];
         newList[index] = item;
         onUpdate(newList);
     }
