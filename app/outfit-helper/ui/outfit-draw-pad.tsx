@@ -1,12 +1,12 @@
 import { ColoredText } from "@/lib/color";
-import { OutfitSlots } from "@/lib/wear-slots";
+import { OutfitItem, OutfitSlots } from "@/lib/wear-slots";
 import clsx from "clsx";
 import React from "react";
 import OutfitDrawRow from "./outfit-draw-row";
 
 interface OutfitDrawPadProps{
     outfit:OutfitSlots;
-    onDraw: (key: keyof OutfitSlots, idx: number) => void;
+    onDraw: (key: keyof OutfitSlots, element: number, idx: number) => void;
 }
 
 
@@ -37,13 +37,18 @@ function Prefix(key?: keyof OutfitSlots): string{
     }
 } 
 
-export default function DrawGrid({ outfit, onDraw } : OutfitDrawPadProps){
+export default function OutfitDrawPad({ outfit, onDraw } : OutfitDrawPadProps){
     const [drawing, setDrawing] = React.useState(false);
     
-    const handleDraw = (key: keyof OutfitSlots, idx: number) =>{
+    const handleDraw = (key: keyof OutfitSlots, element:number, idx: number) =>{
         if(!drawing) return;
-        onDraw(key, idx);        
+        onDraw(key, element, idx);        
     }
+
+    const keys: (keyof OutfitSlots)[] = Object.keys(outfit)
+        .map(key => key as keyof OutfitSlots)
+        .filter(key => outfit[key] !== null)
+        .filter(key => !Array.isArray(outfit[key]) || outfit[key]!.length > 0);
 
     return (
         <div 
@@ -51,21 +56,11 @@ export default function DrawGrid({ outfit, onDraw } : OutfitDrawPadProps){
             onMouseDown={() => setDrawing(true)}
             onMouseUp={() => setDrawing(false)}>
             <div className='justify-start'>
-                {Object.keys(outfit).map(key => key as keyof OutfitSlots).map((key, i) =>{
+                {keys.map((key, i) =>{
+                    const items = Array.isArray(outfit[key])? outfit[key] : [outfit[key]!];
                     return (
                         <div key={`outfit-draw-pad-row-${i}`} className='flex flex-inline space-x-1'>
-                            <OutfitDrawRow item={outfit[key]} prefix={""} drawing={false} onDraw={function (idx: number): void {
-                                throw new Error("Function not implemented.");
-                            } } />{row.map((c, j) =>
-                                <div 
-                                    key={`ascii-draw-row-${i}-field-${j}`} 
-                                    style={{color: c.colors.color, backgroundColor:c.colors.bgColor, whiteSpace: 'pre'}}
-                                    onMouseMove={() => handleDraw(i,j)}
-                                >
-                                    {c.text}
-                                </div>
-                            )}
-                            <div className={clsx('h-6', (row.length !== 0) && 'hidden')}/>
+                            {items.map((item, i) => <OutfitDrawRow key={`outfit-draw-row-${key}-${i}`} item={item} prefix={Prefix(i === 0? key : undefined)} drawing={drawing} onDraw={(idx) => handleDraw(key, i, idx)} />)}
                         </div>
                     );
                 })}

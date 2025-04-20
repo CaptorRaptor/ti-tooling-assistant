@@ -6,6 +6,7 @@ const StringToolContextProvider = dynamic(() =>import('./string-tool-context'), 
 const GradientContextProvider = dynamic(() =>import('./gradient-context'), {ssr:false});
 const ItemContextProvider = dynamic(() =>import('./item-context'), {ssr:false});
 const AsciiDrawContextProvider = dynamic(() =>import('./ascii-draw-context'), {ssr:false});
+const OutfitHelperContextProvider = dynamic(() =>import('./outfit-helper-context'), {ssr:false});
 
 export default function AppWrapper({
     children,
@@ -17,7 +18,9 @@ export default function AppWrapper({
             <GradientContextProvider>
                 <ItemContextProvider>
                     <AsciiDrawContextProvider>
-                        {children}
+                        <OutfitHelperContextProvider>
+                            {children}
+                        </OutfitHelperContextProvider>
                     </AsciiDrawContextProvider>
                 </ItemContextProvider>
             </GradientContextProvider>

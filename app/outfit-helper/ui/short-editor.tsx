@@ -10,19 +10,28 @@ interface ShortEditorProps {
     onUpdate: (list: OutfitItem[]) => void;
 }
 
+
+function getShort(value:string){
+    return value.substring(0, 59);
+}
+
+function FitToSize(colors: (string | null)[], length:number): (string | null)[]{
+    if(colors.length > length){
+        colors = colors.slice(0, length);
+    }
+    else if (colors.length < length){
+        for(let i = 0; i < length; i++){
+            colors.push(null);
+        }
+    }
+    return colors;
+}
+
 export default function ShortEditor({list, label, length, onUpdate}: ShortEditorProps){
     const changeShort = (item: OutfitItem, v: string) : OutfitItem =>{
-        const length = v.length;
-        let color = item.color;
-        if(color.length > length){
-            color = color.slice(0, length);
-        }
-        else if (color.length < length){
-            for(let i = 0; i < length; i++){
-                color.push(null);
-            }
-        }
-        return {key: item.key, color: color, short:v};
+        const short = getShort(v);
+        const color = FitToSize(item.color, short.length);
+        return {key: item.key, color: color, short:short};
     }
 
     const handleAdd = () =>{
