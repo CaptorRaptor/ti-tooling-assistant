@@ -129,7 +129,7 @@ export default function OutfitHelper() {
     };
 
     return (
-        <div className="no-scrollbar">
+        <div className="no-scrollbar justify-items-center">
             <div className="card">
                 <h1 className="mb-2">Outfit Helper</h1>
                 <p>
@@ -146,7 +146,7 @@ export default function OutfitHelper() {
                 {keys.map(key => ShortInput(key))}                    
             </div>
             
-            <div className="card hidden md:block">
+            <div className="card hidden md:block md:max-w-6xl">
                 <div className="flex flex-row content-center justify-between">
                     <div className="flex flex-row content-center justify-items-start gap-4">
                         <div className="flex flex-row gap-4 w-40">
