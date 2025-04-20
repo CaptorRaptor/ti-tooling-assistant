@@ -146,7 +146,7 @@ export default function OutfitHelper() {
                 {keys.map(key => ShortInput(key))}                    
             </div>
             
-            <div className="card hidden md:block md:max-w-6xl">
+            <div className="card hidden md:block md:w-fit md:min-w-2xl lg:min-w-3xl md:max-w-6xl">
                 <div className="flex flex-row content-center justify-between">
                     <div className="flex flex-row content-center justify-items-start gap-4">
                         <div className="flex flex-row gap-4 w-40">

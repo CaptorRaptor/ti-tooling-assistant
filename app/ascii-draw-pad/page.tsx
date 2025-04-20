@@ -174,7 +174,7 @@ export default function AsciiDrawPad(){
                     <ResizeTextArea value={state.pattern} onChange={handlePatternChange}/>
                 </div>
             </div>
-            <div className="card hidden md:block md:grid md:gap-4 md:w-fit md:max-w-6xl">
+            <div className="card hidden md:block md:grid md:gap-4 md:w-fit md:min-w-2xl lg:min-w-3xl md:max-w-6xl">
                 <div className="flex flex-row content-center justify-between">
                     <div className="flex flex-row content-center justify-items-start gap-4">
                         <div className="flex flex-row gap-4 w-40">
