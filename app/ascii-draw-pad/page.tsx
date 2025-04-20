@@ -131,7 +131,7 @@ export default function AsciiDrawPad(){
     };
     
     return (
-        <div className="no-scrollbar">
+        <div className="no-scrollbar justify-items-center">
             <div className="card">
                 <h1 className="mb-2">ASCII Art Draw Pad</h1>
                 <p>
@@ -174,7 +174,7 @@ export default function AsciiDrawPad(){
                     <ResizeTextArea value={state.pattern} onChange={handlePatternChange}/>
                 </div>
             </div>
-            <div className="card hidden md:block md:grid md:gap-4">
+            <div className="card hidden md:block md:grid md:gap-4 md:w-fit md:max-w-6xl">
                 <div className="flex flex-row content-center justify-between">
                     <div className="flex flex-row content-center justify-items-start gap-4">
                         <div className="flex flex-row gap-4 w-40">
@@ -205,7 +205,7 @@ export default function AsciiDrawPad(){
                         <ClipboardDocumentIcon className='color-text size-5 m-2'/>
                     </button>
                 </div>
-                <div className="rounded-lg p-4 bg-primary-dark">
+                <div className="rounded-lg p-4 bg-primary-dark overflow-x-auto scrollbar">
                     {result.split('\n').map((l, i) => <p style={{whiteSpace:'pre'}} key={`result-line-${i}`}>{l}</p>)}
                 </div>
             </div>
