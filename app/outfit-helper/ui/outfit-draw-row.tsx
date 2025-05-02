@@ -33,7 +33,9 @@ export default function OutfitDrawRow({ item, prefix, drawing, onDraw } : Outfit
 
     return (
         <div key='short-draw-row' className={clsx('flex flex-inline space-x-1', item === null && 'hidden')}>
-            {coloredPrefix.map((c, j) => <div key={`color-part-${j}`} style={{color: c.colors.color, backgroundColor: c.colors.bgColor, whiteSpace:"pre"}}>{c.text}</div>)}
+            <div key='short-draw-row-prefix' className={clsx('flex flex-inline space-x-0', coloredPrefix.length === 0 && 'hidden')}>
+                {coloredPrefix.map((c, j) => <div key={`color-part-${j}`} style={{color: c.colors.color, backgroundColor: c.colors.bgColor, whiteSpace:"pre"}}>{c.text}</div>)}
+            </div>
             {content.map((c, i) =>
                 <div 
                     key={`short-draw-row-field-${i}`} 

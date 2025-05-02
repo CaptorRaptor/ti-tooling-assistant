@@ -46,7 +46,7 @@ export default function OutfitHelper() {
         }
 
         return (
-            <div className={clsx("",  (state.outfit[key] === null) && "hidden")}>
+            <div key={`short-input-${key}`} className={clsx("",  (state.outfit[key] === null) && "hidden")}>
                 <ShortEditor
                     key={`${key}-editor`}
                     list={list}
