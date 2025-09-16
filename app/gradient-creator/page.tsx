@@ -62,7 +62,7 @@ export default function GradientStorage() {
     const handleLoad = (i:number) =>{
         if(i >= 0 && i < storage.length){
             updateGradient({...gradientState, useGradient:true, gradient:storage[i], pattern:storage[i].colors});
-            router.push('/string-tool');
+            router.push('/');
         }
     }
 

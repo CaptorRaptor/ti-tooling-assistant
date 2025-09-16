@@ -19,7 +19,7 @@ export default function ItemStorage() {
         if(i >= 0 && i < storage.length){
             updateGradient({...gradientState, useGradient:false});
             updateItem(storage[i].item);
-            router.push('/string-tool');
+            router.push('/');
         }
     }
 
