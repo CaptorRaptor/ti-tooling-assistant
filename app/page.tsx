@@ -9,6 +9,8 @@ export default function Home() {
                 <h1 className="mb-2">String Tool</h1>
                 <p>
                     This tool assist in coloring and tooling items of <a href='https://ti-legacy.com'>The Inquisition: Legacy</a>.
+                </p>
+                <p>
                     Please check whenever you have xterm colors turned on with the xterm command.
                 </p>
             </div>
