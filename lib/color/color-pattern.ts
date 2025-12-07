@@ -118,6 +118,7 @@ function stretchColors(length:number, colors:ColorToken[], keepLength:boolean = 
 export function applyPattern(text:string, gradientState: GradientState) : string
 {
     if(text.length === 0) return text;
+    // TODO: Add suspension for color here
     
     let letters = Array.from(text).map(c => escapeSpecialCharacter(c));
     let colors = gradientState.colorList.map<ColorToken>(c => getToken(c));
